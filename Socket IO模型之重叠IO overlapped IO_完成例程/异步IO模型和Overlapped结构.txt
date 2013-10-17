@@ -1,0 +1,41 @@
+OVERLAPPED结构主要用于异步I/O操作，其数据结构定义如下： 
+
+typedef struct _OVERLAPPED { 
+    DWORD Internal;     // 系统保留，存放系统设置的状态 
+    DWORD InternalHigh; // 系统保留，存放被传输数据的长度 
+    DWORD Offset;       // 指定文件的位置，文件位置是相对文件开始处的字节偏移量。 
+    DWORD OffsetHigh;   // 指定开始传送数据的字节偏移量的高位字 
+    HANDLE hEvent;      // 标识事件，数据传送完成时把它设为信号状态 
+}OVERLAPPED; 
+
+Overlapped I/O模型可以用以下几种方式实现： 
+
+一、内核对象实现 
+1. 把设备句柄看作同步对象，ReadFile将设备句柄设置为无信号。ReadFile异步I/O字节位置必须在OVERLAPPED结构中指定。 
+2. 完成I/O，设置信息状态为有信号。 
+3. 通过WaitForSingleObject或WaitForMultipleObject判断或者异步设备调用GetOverLappedResult函数。 
+
+二、事件内核对象实现 
+1. Overlapped成员hEven标识事件内核对象。CreateEvent,为每个请求创建一个事件，初始化每个请求的hEvent成员。
+   调用WaitForMultipleObject来等其中一个或全部完成。 
+2. Event对象必须是手动重置，使用自动重置WaitForSingleObject()和 WaitForMultipleObjects()函数不会返回。 
+
+关于自动重置事件和手动重置事件 
+自动重置事件：WaitForSingleObject()和WaitForMultipleObjects()会等待事件到信号状态，随后又自动将其重置为非信号状态，
+保证等待此事件的线程中只有一个会被唤醒。 
+手动重置事件：需要调用ResetEvent()才会重置事件。可能有若干个线程在等待同一事件，这样当事件变为信号状态时，
+所有等待线程都可以运行了。 SetEvent()函数用来把事件对象设置成信号状态，ResetEvent()把事件对象重置成非信号状态，
+两者均需事件对象句柄作参数。 
+
+三、异步过程调用 
+在一个Overlapped I/O完成之后，系统调用callback回调函数。系统在设备句柄有信号状态下，才会调用回调函数，
+传给它完成I/O请求的错误码，传输字节数和 Overlapped结构的地址。
+通过下面的五个函数可以设置信号状态：SleepEx，WaitForSingleObjectEx，WaitForMultipleObjectEx，SingalObjectAndWait，MsgWaitForMultipleObjectsEx。 
+
+四、完成端口 
+完成端口(I/O completion)的优点：不会限制handle个数，可处理成千上万个连接。I/O completion port允许一个线程将一个请求暂时保存下来，
+由另一个线程为它做实际服务。 
+并发模型与线程池：在典型的并发模型中，服务器为每一个客户端创建一个线程，如果很多客户同时请求，
+则这些线程都是运行的，那么CPU就要一个个切换，CPU花费了更多的时间在线程切换，线程却没得到很多CPU时间。
+到底应该创建多少个线程比较合适呢，微软件帮助文档上讲应该是2*CPU个。但理想条件下最好线程不要切换，而又能象线程池一样，重复利用。
+I/O完成端口就是使用了线程池。一个线程执行任务结束后不会销毁，而是重新回到线程队列中。

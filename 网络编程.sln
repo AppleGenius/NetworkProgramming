@@ -1,0 +1,110 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPIO模型", "网络编程\网络编程.vcxproj", "{80AA9381-D621-441F-93A3-9A8916E0D937}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cpio_client", "cpio_client\cpio_client.vcxproj", "{081C2887-322E-43CC-89FF-722A99CABA06}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "threads_server", "threads_server\threads_server.vcxproj", "{88C8CD01-DAC7-4010-B0A1-E2731A9AA18F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "threads_client", "threads_client\threads_client.vcxproj", "{A9119EA3-95EE-4FE9-B463-43B3BEEE80B1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "base_client", "client\client.vcxproj", "{5A0D1C4E-A78A-4C83-B486-DC4FA91052A0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "base_server", "server\server.vcxproj", "{4FE8C2A8-D852-4390-8781-D40A66B31F28}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcp_client", "tcp_client\tcp_client.vcxproj", "{98BB2087-A500-4350-BE24-D083F57DFAE8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcp_server", "tcp_server\tcp_server.vcxproj", "{85E1A002-CA17-4164-96CC-F174AE2529F8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udp_client", "udp_client\udp_client.vcxproj", "{6E5CA8BD-A3E0-48B5-90FB-DD33A8EA9E1A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "udp_server", "udp_server\udp_server.vcxproj", "{3F2B3478-54B6-4CA0-90EB-CCB7AC4CB66E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket IO模型之事件选择WSAEventSelect", "Socket IO模型之事件选择WSAEventSelect\Socket IO模型之事件选择WSAEventSelect.vcxproj", "{B3AFDAFF-7BA9-4B00-82F5-1706C9C60F2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket IO模型之完成端口completion port", "Socket IO模型之完成端口completion port\Socket IO模型之完成端口completion port.vcxproj", "{5ADCD064-319F-47AF-B036-A8DB4ACB1ED9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket IO模型之选择select", "Socket IO模型之选择select\Socket IO模型之选择select.vcxproj", "{1FD22CA2-5165-4356-B3BB-1FED2F03DEA7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket IO模型之异步选择WSAAsyncSelect", "Socket IO模型之异步选择WSAAsyncSelect\Socket IO模型之异步选择WSAAsyncSelect.vcxproj", "{0AA4DACF-5295-4016-8A58-2FFFE08E148C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket IO模型之重叠IO overlapped IO_事件通知", "Socket IO模型之重叠IO overlapped IO\Socket IO模型之重叠IO overlapped IO.vcxproj", "{1EB1C4E0-46DF-4988-92B0-A86DE5B65017}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Socket IO模型之重叠IO overlapped IO_完成例程", "Socket IO模型之重叠IO overlapped IO_完成例程\Socket IO模型之重叠IO overlapped IO_完成例程.vcxproj", "{2899952E-22EB-4CA4-9A20-7A0DBA602EB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80AA9381-D621-441F-93A3-9A8916E0D937}.Debug|Win32.ActiveCfg = Debug|Win32
+		{80AA9381-D621-441F-93A3-9A8916E0D937}.Debug|Win32.Build.0 = Debug|Win32
+		{80AA9381-D621-441F-93A3-9A8916E0D937}.Release|Win32.ActiveCfg = Release|Win32
+		{80AA9381-D621-441F-93A3-9A8916E0D937}.Release|Win32.Build.0 = Release|Win32
+		{081C2887-322E-43CC-89FF-722A99CABA06}.Debug|Win32.ActiveCfg = Debug|Win32
+		{081C2887-322E-43CC-89FF-722A99CABA06}.Debug|Win32.Build.0 = Debug|Win32
+		{081C2887-322E-43CC-89FF-722A99CABA06}.Release|Win32.ActiveCfg = Release|Win32
+		{081C2887-322E-43CC-89FF-722A99CABA06}.Release|Win32.Build.0 = Release|Win32
+		{88C8CD01-DAC7-4010-B0A1-E2731A9AA18F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{88C8CD01-DAC7-4010-B0A1-E2731A9AA18F}.Debug|Win32.Build.0 = Debug|Win32
+		{88C8CD01-DAC7-4010-B0A1-E2731A9AA18F}.Release|Win32.ActiveCfg = Release|Win32
+		{88C8CD01-DAC7-4010-B0A1-E2731A9AA18F}.Release|Win32.Build.0 = Release|Win32
+		{A9119EA3-95EE-4FE9-B463-43B3BEEE80B1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A9119EA3-95EE-4FE9-B463-43B3BEEE80B1}.Debug|Win32.Build.0 = Debug|Win32
+		{A9119EA3-95EE-4FE9-B463-43B3BEEE80B1}.Release|Win32.ActiveCfg = Release|Win32
+		{A9119EA3-95EE-4FE9-B463-43B3BEEE80B1}.Release|Win32.Build.0 = Release|Win32
+		{5A0D1C4E-A78A-4C83-B486-DC4FA91052A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5A0D1C4E-A78A-4C83-B486-DC4FA91052A0}.Debug|Win32.Build.0 = Debug|Win32
+		{5A0D1C4E-A78A-4C83-B486-DC4FA91052A0}.Release|Win32.ActiveCfg = Release|Win32
+		{5A0D1C4E-A78A-4C83-B486-DC4FA91052A0}.Release|Win32.Build.0 = Release|Win32
+		{4FE8C2A8-D852-4390-8781-D40A66B31F28}.Debug|Win32.ActiveCfg = Debug|Win32
+		{4FE8C2A8-D852-4390-8781-D40A66B31F28}.Debug|Win32.Build.0 = Debug|Win32
+		{4FE8C2A8-D852-4390-8781-D40A66B31F28}.Release|Win32.ActiveCfg = Release|Win32
+		{4FE8C2A8-D852-4390-8781-D40A66B31F28}.Release|Win32.Build.0 = Release|Win32
+		{98BB2087-A500-4350-BE24-D083F57DFAE8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{98BB2087-A500-4350-BE24-D083F57DFAE8}.Debug|Win32.Build.0 = Debug|Win32
+		{98BB2087-A500-4350-BE24-D083F57DFAE8}.Release|Win32.ActiveCfg = Release|Win32
+		{98BB2087-A500-4350-BE24-D083F57DFAE8}.Release|Win32.Build.0 = Release|Win32
+		{85E1A002-CA17-4164-96CC-F174AE2529F8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{85E1A002-CA17-4164-96CC-F174AE2529F8}.Debug|Win32.Build.0 = Debug|Win32
+		{85E1A002-CA17-4164-96CC-F174AE2529F8}.Release|Win32.ActiveCfg = Release|Win32
+		{85E1A002-CA17-4164-96CC-F174AE2529F8}.Release|Win32.Build.0 = Release|Win32
+		{6E5CA8BD-A3E0-48B5-90FB-DD33A8EA9E1A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6E5CA8BD-A3E0-48B5-90FB-DD33A8EA9E1A}.Debug|Win32.Build.0 = Debug|Win32
+		{6E5CA8BD-A3E0-48B5-90FB-DD33A8EA9E1A}.Release|Win32.ActiveCfg = Release|Win32
+		{6E5CA8BD-A3E0-48B5-90FB-DD33A8EA9E1A}.Release|Win32.Build.0 = Release|Win32
+		{3F2B3478-54B6-4CA0-90EB-CCB7AC4CB66E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F2B3478-54B6-4CA0-90EB-CCB7AC4CB66E}.Debug|Win32.Build.0 = Debug|Win32
+		{3F2B3478-54B6-4CA0-90EB-CCB7AC4CB66E}.Release|Win32.ActiveCfg = Release|Win32
+		{3F2B3478-54B6-4CA0-90EB-CCB7AC4CB66E}.Release|Win32.Build.0 = Release|Win32
+		{B3AFDAFF-7BA9-4B00-82F5-1706C9C60F2E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B3AFDAFF-7BA9-4B00-82F5-1706C9C60F2E}.Debug|Win32.Build.0 = Debug|Win32
+		{B3AFDAFF-7BA9-4B00-82F5-1706C9C60F2E}.Release|Win32.ActiveCfg = Release|Win32
+		{B3AFDAFF-7BA9-4B00-82F5-1706C9C60F2E}.Release|Win32.Build.0 = Release|Win32
+		{5ADCD064-319F-47AF-B036-A8DB4ACB1ED9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5ADCD064-319F-47AF-B036-A8DB4ACB1ED9}.Debug|Win32.Build.0 = Debug|Win32
+		{5ADCD064-319F-47AF-B036-A8DB4ACB1ED9}.Release|Win32.ActiveCfg = Release|Win32
+		{5ADCD064-319F-47AF-B036-A8DB4ACB1ED9}.Release|Win32.Build.0 = Release|Win32
+		{1FD22CA2-5165-4356-B3BB-1FED2F03DEA7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1FD22CA2-5165-4356-B3BB-1FED2F03DEA7}.Debug|Win32.Build.0 = Debug|Win32
+		{1FD22CA2-5165-4356-B3BB-1FED2F03DEA7}.Release|Win32.ActiveCfg = Release|Win32
+		{1FD22CA2-5165-4356-B3BB-1FED2F03DEA7}.Release|Win32.Build.0 = Release|Win32
+		{0AA4DACF-5295-4016-8A58-2FFFE08E148C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0AA4DACF-5295-4016-8A58-2FFFE08E148C}.Debug|Win32.Build.0 = Debug|Win32
+		{0AA4DACF-5295-4016-8A58-2FFFE08E148C}.Release|Win32.ActiveCfg = Release|Win32
+		{0AA4DACF-5295-4016-8A58-2FFFE08E148C}.Release|Win32.Build.0 = Release|Win32
+		{1EB1C4E0-46DF-4988-92B0-A86DE5B65017}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1EB1C4E0-46DF-4988-92B0-A86DE5B65017}.Debug|Win32.Build.0 = Debug|Win32
+		{1EB1C4E0-46DF-4988-92B0-A86DE5B65017}.Release|Win32.ActiveCfg = Release|Win32
+		{1EB1C4E0-46DF-4988-92B0-A86DE5B65017}.Release|Win32.Build.0 = Release|Win32
+		{2899952E-22EB-4CA4-9A20-7A0DBA602EB7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2899952E-22EB-4CA4-9A20-7A0DBA602EB7}.Debug|Win32.Build.0 = Debug|Win32
+		{2899952E-22EB-4CA4-9A20-7A0DBA602EB7}.Release|Win32.ActiveCfg = Release|Win32
+		{2899952E-22EB-4CA4-9A20-7A0DBA602EB7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
